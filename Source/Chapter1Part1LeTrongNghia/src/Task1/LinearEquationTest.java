@@ -1,6 +1,13 @@
+package Task1;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+/* Author: Lê Trọng Nghia
+ * Date: 18/8/2016
+ * Version: V1.0
+ * Description: this class use to test method sloveEquation of LinearEquation class
+ */
 
 public class LinearEquationTest {
 	@Test
