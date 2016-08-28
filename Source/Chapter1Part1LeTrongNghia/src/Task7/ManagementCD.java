@@ -2,44 +2,56 @@ package Task7;
 /* Author: Lê Trọng Nghia
  * Date: 20/8/2016
  * Version: V1.0
- * Description: this class use to manage list CD
+ * Description: this is main class
  */
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class ManagementCD {
-	public CD[] listCD = new CD[100];
-	public int count = 0;
-	
-
-	public ManagementCD() {
+	public static Scanner input = new Scanner(System.in);
+	public static void importCD(CD x) {
+		System.out.print("ID: ");
+		x.setId(input.nextInt());
+		System.out.print("Name: ");
+		x.setName(input.next());
+		System.out.print("Singer: ");
+		x.setSinger(input.next());
+		System.out.print("Number of song: ");
+		x.setNumberOfSong(input.nextInt());
+		System.out.print("Price: ");
+		x.setPrice(input.nextDouble());
+		if (x.getPrice() < 0 || x.getNumberOfSong() < 0)
+			throw new InputMismatchException("Please you check again");
+		
 	}
-
-	/*
-	 * this method use to print information list CD
-	 */
-	public void printInfo() {
-		System.out.println("---Information of list cd---");
-		for(int i = 0; i < this.count; i++) {
-			System.out.println("CD no " + i);
-			System.out.println(this.listCD[i].toString());
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			ListCD m = new ListCD();
+			boolean stop = false;
+			while (stop == false) {
+				System.out.println("Do you want to add CD?");
+				String w = input.next();
+				switch (w.toUpperCase()) {
+					case "N":
+						stop = true;
+						break;
+					case "Y": {
+						CD cd = new CD();
+						System.out.println("Import informationCD:");
+						importCD(cd);
+						m.add(cd);
+						m.printInfo();
+					} break;
+					default:
+						throw new InputMismatchException("Please you check again");
+				}
+			}
+		} catch (InputMismatchException e) {
+			System.out.println("Error: " + e.getMessage());
 		}
-		System.out.println("Total: " + sumPrice());
+		
 	}
-	
-	/*
-	 * this method use to sum price listCD
-	 */
-	public double sumPrice() {
-		double tong = 0;
-		for(int i = 0; i < this.count; i++) {
-			tong += listCD[i].getPrice();
-		}
-		return tong;
-	}
-	
-	/*
-	 * this method use to add CD
-	 */
-	public void add(CD a) {
-		this.listCD[this.count] = a;
-		this.count = this.count + 1;
-	}
+
 }

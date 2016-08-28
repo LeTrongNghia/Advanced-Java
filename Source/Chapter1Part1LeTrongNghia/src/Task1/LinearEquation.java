@@ -1,5 +1,4 @@
 package Task1;
-
 /* Author: Lê Trọng Nghia
  * Date: 18/8/2016
  * Version: V1.0

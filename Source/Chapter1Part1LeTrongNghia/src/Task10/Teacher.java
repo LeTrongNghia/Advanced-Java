@@ -53,8 +53,8 @@ public class Teacher extends Human{
 	 * Summary: use to calculate salary of teacher
 	 * output double salary
 	 */
-	public double calculateSalary() {
-		return this.wayCoe * this.basicPay + this.allowance;
+	public long calculateSalary() {
+		return (long)(this.wayCoe * this.basicPay + this.allowance);
 	}
 	
 	/*

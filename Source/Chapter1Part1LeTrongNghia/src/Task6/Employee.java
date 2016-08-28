@@ -5,10 +5,10 @@ package Task6;
  * Description: class descripte information employee to calculate tax
  */
 public class Employee {
-	private String name;
-	private int nOD;//number of dependents
-	private double allowance;
-	private float wayCoe;// way coefficient
+	public String name;
+	public int nOD;//number of dependents
+	public double allowance;
+	public float wayCoe;// way coefficient
 	final double basicPay = 1260000;
 	final double maxRate1 = 250000;// max tax of rate tax
 	final double maxRate2 = 500000;
@@ -137,5 +137,12 @@ public class Employee {
 	public long calculateRE() {
 		return this.calculateIncome() - this.calculatePIT();
 	}
+
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", nOD=" + nOD + ", allowance=" + allowance + ", wayCoe=" + wayCoe
+				+ ", calculateRE()=" + calculateRE() + "]";
+	}
+	
 	
 }

@@ -49,8 +49,8 @@ public class Computer {
 	 * Summary: use to calculate money for computer
 	 * output: double total money
 	 */
-	public double calculatorMoney() {
-		return this.numberOf * this.unitPrice;
+	public long calculatorMoney() {
+		return (long) ((long)this.numberOf * this.unitPrice);
 	}
 	
 	/*
