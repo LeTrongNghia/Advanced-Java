@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
  * Version: V1.0
  * Description: this is main class
  */
-public class MnagementCD {
+public class ManagementCD {
     public static Scanner input = new Scanner(System.in);
     
     /*
