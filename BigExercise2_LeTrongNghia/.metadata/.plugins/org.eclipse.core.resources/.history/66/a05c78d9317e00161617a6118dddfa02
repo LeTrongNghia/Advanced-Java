@@ -1,0 +1,11 @@
+package Task3;
+
+/**
+ * @author Le Trong Nghia
+ * @date Sep 19, 2016
+ * @version 1.0
+ * @description interface operator
+ */
+public interface Comparator {
+	public Integer operate(String a, String b);
+}

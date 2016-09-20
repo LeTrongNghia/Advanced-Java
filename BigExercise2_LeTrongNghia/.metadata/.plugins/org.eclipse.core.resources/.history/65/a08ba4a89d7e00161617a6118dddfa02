@@ -1,0 +1,65 @@
+package Task2;
+
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.StreamCorruptedException;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @author Le Trong Nghia
+ * @date Sep 20, 2016
+ * @version 1.0
+ * @description this is main class for text
+ */
+public class ManagementCDByText {
+	
+	/*
+	 * use to write list cd on managementCD.txt
+	 * input List<CD>
+	 */
+	public static void writeListCD(List<CD> list) {
+		try {
+			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("ManagementCD.txt"));
+			for (CD cd : list) {
+				out.writeObject(cd);
+			}
+			out.close();
+		} catch (IOException e) {
+			System.err.println(e.getMessage());
+		}
+	}
+	
+	/*
+	 * use to read list cd on managementCD.txt
+	 * output List<CD>
+	 */
+	public static List<CD>> readListCD() {
+		List<CD> list;
+		FileInputStream f = new FileInputStream("ManagementCD.txt");
+		if (f.available() != 0) {
+			try {
+				ObjectInputStream input = new ObjectInputStream(f);
+				list = new ArrayList<CD>();
+				while (true) {
+					CD cd = (CD) input.readObject();
+					list.add(cd);
+				}
+			} catch (EOFException | StreamCorruptedException e) {
+				System.out.println(e.getMessage());
+			}
+
+		}
+		return list;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

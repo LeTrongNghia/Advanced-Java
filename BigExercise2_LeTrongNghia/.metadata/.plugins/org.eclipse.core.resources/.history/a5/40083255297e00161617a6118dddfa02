@@ -1,0 +1,18 @@
+package Task4;
+
+/**
+ * @author Le Trong Nghia
+ * @date Sep 19, 2016
+ * @version 1.0
+ * @description this is main class
+ */
+public class ManagementEmployee {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ListEmployee list = new ListEmployee();
+		
+		list.toString();
+	}
+
+}

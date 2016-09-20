@@ -1,0 +1,99 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+import bigexercise_ex4_hatandien.BigExercise_Ex4_HaTanDien;
+import bigexercise_ex4_hatandien.Employee;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ *
+ * @author Ha Tan Dien
+ * @date 9/19/2016
+ * @version 1.0
+ */
+public class AverageAgeTest {
+
+    List<Employee> lstEmployee = new ArrayList<Employee>();
+
+    public AverageAgeTest() throws IllegalAccessException {
+        BigExercise_Ex4_HaTanDien.initListEmployee(lstEmployee);
+    }
+
+    //Test for the average age of employees
+    @Test
+    public void averageAge1() {
+        double ex = 21.6666;
+        double ac = BigExercise_Ex4_HaTanDien.averageAge(lstEmployee);
+        assertEquals(ex, ac, 0.01);
+    }
+
+    @Test
+    public void averageAge2() {
+        double ex = 21.6666;
+        double ac = BigExercise_Ex4_HaTanDien.averageAge(lstEmployee);
+        assertEquals(ex, ac, 0.01);
+    }
+
+    @Test
+    public void averageAge3() {
+        double ex = 21.6666;
+        double ac = BigExercise_Ex4_HaTanDien.averageAge(lstEmployee);
+        assertEquals(ex, ac, 0.01);
+    }
+
+    @Test
+    public void averageAge4() {
+        double ex = 21.6666;
+        double ac = BigExercise_Ex4_HaTanDien.averageAge(lstEmployee);
+        assertEquals(ex, ac, 0.01);
+    }
+
+    @Test
+    public void averageAge5() {
+        double ex = 21.6666;
+        double ac = BigExercise_Ex4_HaTanDien.averageAge(lstEmployee);
+        assertEquals(ex, ac, 0.01);
+    }
+
+    @Test
+    public void averageAge6() {
+        double ex = 1;
+        double ac = BigExercise_Ex4_HaTanDien.averageAge(lstEmployee);
+        assertEquals(ex, ac, 0.01);
+    }
+
+    @Test
+    public void averageAge7() {
+        double ex = 2;
+        double ac = BigExercise_Ex4_HaTanDien.averageAge(lstEmployee);
+        assertEquals(ex, ac, 0.01);
+    }
+
+    @Test
+    public void averageAge8() {
+        double ex = 3;
+        double ac = BigExercise_Ex4_HaTanDien.averageAge(lstEmployee);
+        assertEquals(ex, ac, 0.01);
+    }
+
+    @Test
+    public void averageAge9() {
+        double ex = 4;
+        double ac = BigExercise_Ex4_HaTanDien.averageAge(lstEmployee);
+        assertEquals(ex, ac, 0.01);
+    }
+
+    @Test
+    public void averageAge10() {
+        double ex = 5;
+        double ac = BigExercise_Ex4_HaTanDien.averageAge(lstEmployee);
+        assertEquals(ex, ac, 0.01);
+    }
+
+}

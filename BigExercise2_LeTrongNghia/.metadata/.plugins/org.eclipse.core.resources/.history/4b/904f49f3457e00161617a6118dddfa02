@@ -1,0 +1,22 @@
+package Task2_1;
+
+import java.sql.SQLException;
+import java.util.List;
+
+/**
+ * @author Le Trong Nghia
+ * @date Sep 19, 2016
+ * @version 1.0
+ * @description this is main class
+ */
+public class ManagementCD {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		CDContoller cdController = new CDContoller();
+		List<CD> list = cdController.getListCD();
+		list.forEach(i -> System.out.println(i.toString()));
+		CD cd = new CD("Mot nha", "Lê Trọng Nghĩa", 2, 10000);
+		cdController.addCD(cd);
+	}
+
+}

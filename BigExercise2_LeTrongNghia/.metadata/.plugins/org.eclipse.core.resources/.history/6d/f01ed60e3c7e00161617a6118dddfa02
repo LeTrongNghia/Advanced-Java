@@ -1,0 +1,27 @@
+package Task2_1;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+
+/**
+ * @author Le Trong Nghia
+ * @date Sep 19, 2016
+ * @version 1.0
+ * @description class for product controller
+ */
+public class CDContoller {
+	Database db = new Database();
+	
+	public List<Product> getListProduct() throws SQLException {
+		List<Product> list;
+		try(Connection conn = db.connect()) {
+			list = new ArrayList<Product>();
+			Statement sta = conn.createStatement();
+			String sql = "SELECT * FROM produ"
+		}
+	}
+}
